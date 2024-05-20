@@ -14,7 +14,7 @@ body {
   overflow-y: scroll;
   width: 100vw;
   height: 100vh;
-  background-color: aliceblue;
+  background: linear-gradient(180deg, hsl(200, 49%, 62%), hsl(221, 30%, 88%));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,6 +98,10 @@ body {
   border-radius: 10px;
   color: aliceblue;
 }
+.container .search-meta .info-cont {
+  display: flex;
+  gap: 0.5vw;
+}
 .container .infos {
   padding-block: 5vh;
   display: flex;
@@ -151,7 +155,7 @@ body {
 }
 
 .dark {
-  background-color: #000;
+  background: linear-gradient(145deg, #000, #111, #222);
 }
 .dark .date,
 .dark .loc-name {
@@ -160,4 +164,8 @@ body {
 
 .container::-webkit-scrollbar {
   display: none;
+}
+
+.fetched-data {
+  color: aquamarine;
 }/*# sourceMappingURL=style.css.map */

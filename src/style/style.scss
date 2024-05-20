@@ -26,7 +26,7 @@ body {
     overflow-y: scroll;
     width: 100vw;
     height: 100vh;
-    background-color: aliceblue;
+    background: $day;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,6 +119,11 @@ body {
         padding: 0.5rem;
         border-radius: 10px;
         color: aliceblue;
+        .info-cont{
+            display: flex;
+            gap: 0.5vw;
+            
+        }
     }
 
     .infos {
@@ -176,7 +181,7 @@ body {
 }
 
 .dark {
-    background-color: #000;
+    background: linear-gradient(145deg, #000, #111, #222);
 
     .date,
     .loc-name {
@@ -186,4 +191,7 @@ body {
 
 .container::-webkit-scrollbar{
     display: none;
+}
+.fetched-data{
+    color: aquamarine;
 }

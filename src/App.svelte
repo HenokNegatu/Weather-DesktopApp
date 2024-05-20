@@ -1,6 +1,5 @@
 <script lang="ts">
   import "./style/style.scss";
-  import Cloud from "phosphor-svelte/lib/Cloud";
   import Thermometer from "phosphor-svelte/lib/Thermometer";
   import DropHalfBottom from "phosphor-svelte/lib/DropHalfBottom";
   import Wind from "phosphor-svelte/lib/Wind";
@@ -101,19 +100,18 @@
     <img src={img} alt="cloud icon" />
     <div class="info">
       <p>{weatherData.location["name"]}</p>
-      <p class="date">{weatherData.current.condition["text"]}</p>
+      <p class="date fetched-data">{weatherData.current.condition["text"]}</p>
       <p class="date">{f.format(today)}</p>
       <img src={weatherData.current.condition["icon"]} alt="cloud icon" />
     </div>
   </div>
 
   <div class="search-meta">
-    <p>local time: {weatherData.location["localtime"]}</p>
-    <p>region: {weatherData.location["region"]}</p>
-    <p>country: {weatherData.location["country"]}</p>
-    
-    <p>lat: {weatherData.location["lat"]}</p>
-    <p>lon: {weatherData.location["lon"]}</p>
+    <div class="info-cont"><p>local time:</p><p class="fetched-data">{weatherData.location["localtime"]}</p></div>
+    <div class="info-cont"><p>region:</p><p class="fetched-data">{weatherData.location["region"]}</p></div>
+    <div class="info-cont"><p>country:</p><p class="fetched-data">{weatherData.location["country"]}</p></div>
+    <div class="info-cont"><p>lat:</p><p class="fetched-data">{weatherData.location["lat"]}</p></div>
+    <div class="info-cont"><p>lon:</p><p class="fetched-data">{weatherData.location["lon"]}</p></div>
 
   </div>
 
