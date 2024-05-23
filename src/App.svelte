@@ -8,6 +8,7 @@
   import MagnifyingGlass from "phosphor-svelte/lib/MagnifyingGlass";
   import Sun from "phosphor-svelte/lib/Sun";
   import Moon from "phosphor-svelte/lib/Moon";
+ 
 
   import img from "./assets/images/mist.png";
   
@@ -50,7 +51,7 @@
   const fetchWeather = async (e: any) => {
     e.preventDefault();
     try {
-      const result: string = await invoke("fetch_data", {address: term});
+      const result: string = await invoke("fetch_data", {address: term, key: import.meta.env.VITE_APIKEY});
       console.log(result);
       weatherData = await JSON.parse(result);
       console.log(weatherData);
@@ -62,10 +63,8 @@
   onMount(async ()=>{
     term = 'addis ababa'
     try {
-      const result: string = await invoke("fetch_data", {address: term});
-      console.log(result);
+      const result: string = await invoke("fetch_data", {address: term, key: import.meta.env.VITE_APIKEY});
       weatherData = await JSON.parse(result);
-      console.log(weatherData);
     } catch (e) {
       console.log(e);
     }
