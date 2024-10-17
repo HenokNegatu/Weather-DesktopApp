@@ -6,3 +6,4 @@ This template should help get you started developing with Tauri, Svelte and Type
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
 # Weather-DesktopApp
+Weather app built with Tauri to explore desktop app development using Rust. This project aims to test app responsiveness and evaluate how seamlessly Tauri integrates with other frameworks for an efficient and modern desktop development experience.
